@@ -1,0 +1,2 @@
+python run_log_plot.py --LM no --dataset cifar10 --model resnet110_noshort --optimizer SGD --epochs 100 --BS 128 --LR 0.05 --MOM 0.9 --WD 0
+python run_log_plot.py --LM yes --dataset cifar10 --model resnet110_noshort --optimizer SGD_IKSA --epochs 100 --BS 128 --SEED 1234 --LR 0.05 --MOM 0.9 --WD 0 --f x --C 2
