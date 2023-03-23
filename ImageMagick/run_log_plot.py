@@ -4,10 +4,13 @@ from matplotlib import cm
 from matplotlib import animation
 from mpl_toolkits.mplot3d import Axes3D
 import argparse
+import warnings
+warnings.filterwarnings("ignore")
+
 # plt.rcParams["figure.figsize"] = (20,20)
 # XX_cifar10_resnet110_noshort_SGD_epochs=100_BS=128_LR=0.05_MOM=0.9_WD=0.npy
 #XX_cifar10_resnet110_noshort_SGD_IKSA_epochs=100_BS=128_SEED=1234_LR=0.05_MOM=0.9_WD=0_C=2_f=x.npy
-def generate_plots(args, log=False):
+def generate_plots(args, log=True):
     dataset = args.dataset
     model = args.model
     optimizer = args.optimizer
@@ -85,3 +88,4 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
     generate_plots(args)
+    print("GIF Plot generated successfully")
